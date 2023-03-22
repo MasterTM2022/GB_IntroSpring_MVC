@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:border-spacing="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<h1>List of products:</h1>
+<table border="1">
+    <tr th:each="product: ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.title}"></td>
+        <td th:text="${product.cost}"></td>
+</table>
+<h1>
+    Total: <span th:text="${products.size()}"></span>
+</h1>
+
+<h1 color = "red">
+    <a href="http://localhost:8180/app/products/add">Add product</a>
+</h1>
+</body>
+</html>
